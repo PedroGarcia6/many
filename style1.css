@@ -1,0 +1,55 @@
+svg {
+  width: 1000;
+  height: 1000;
+  display: block;
+  position: absolute;
+}
+
+/* Movimenta o skatista na rampa em trajetória parabólica de ida e volta */
+
+.skate {
+  
+  offset-path: path('M 205 275 q 145 290 310 170');
+  offset-distance: 0%;
+
+  animation: skate 1.5s linear alternate infinite;
+}
+
+/* Movimenta o skatista na grama em trajetória retilínea de ida e volta */
+
+.skate2 {
+  
+  offset-path: path('M -500 850 L 1300 850');
+  offset-distance: 0%;
+
+  animation: skate 10s linear alternate infinite;
+}
+
+/* Movimenta a nuvem rápida em trajetória retilínea */
+
+.nuvem1 {
+  
+  offset-path: path('M 2200 300 L 100 300');
+  offset-distance: 0%;
+
+  animation: skate 25s linear infinite;
+}
+
+/* Movimenta a nuvem lenta em trajetória retilínea */
+
+.nuvem2 {
+  
+  offset-path: path('M 2500 450 L 200 450');
+  offset-distance: 0%;
+
+  animation: skate 35s linear infinite;
+}
+
+@keyframes skate {
+  from {
+    offset-distance: 0%;
+  }
+  to {
+    offset-distance: 100%;
+  }
+}
